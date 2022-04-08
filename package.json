@@ -6,6 +6,17 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GiovanniAS/front-re-inventory-x.git"
+  },
+  "keywords": [],
+  "author": "GiovanniAS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GiovanniAS/front-re-inventory-x/issues"
+  },
+  "homepage": "https://github.com/GiovanniAS/front-re-inventory-x#readme",
   "dependencies": {
     "axios": "^0.26.1",
     "boostrap": "^2.0.0",
