@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Productos from '../views/Productos.vue'
+import Post from '../views/Post.vue'
+import Put from '../views/Put.vue'
 
 Vue.use(VueRouter)
 
@@ -15,6 +17,16 @@ const routes = [
     path: '/productos',
     name: 'Productos',
     component: Productos
+  },
+  {
+    path: '/post',
+    name: 'Post',
+    component: Post
+  },
+  {
+    path: '/put/:id',
+    name: 'Put',
+    component: Put
   },
   {
     path: '/about',

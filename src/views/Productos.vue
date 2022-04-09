@@ -2,12 +2,12 @@
     <div class="container">
         <h1>Productos</h1>
         <br>
-<!--         <router-link  -->
-<!--             class="btn btn-success"-->
-<!--             style="width:100%; margin: 5px;" -->
-<!--             to="/post"> -->
-<!--             Agregar nota -->
-<!--         </router-link> -->
+        <router-link 
+            class="btn btn-success"
+            style="width:100%; margin: 5px;"
+            to="/post">
+            Agregar nota
+        </router-link>
         <br><br>
         <table class="table">
             <thead>
