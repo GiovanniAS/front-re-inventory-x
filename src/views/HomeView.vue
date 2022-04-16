@@ -1,11 +1,14 @@
 <template>
-  <div class="home">
-    <h3>Futura vista de login (Posiblmente)</h3>
-  </div>
+  <Header />
 </template>
 
 <script>
-export default {
+  import Header from '@/components/Header'
+  export default {
+    name: 'Home',
 
-}
+    components: {
+      Header,
+    },
+  }
 </script>

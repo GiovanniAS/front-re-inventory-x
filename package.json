@@ -2,21 +2,11 @@
   "name": "front-re-inventory-x",
   "version": "0.1.0",
   "private": true,
+  "author": "GiovanniAS",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GiovanniAS/front-re-inventory-x.git"
-  },
-  "keywords": [],
-  "author": "GiovanniAS",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/GiovanniAS/front-re-inventory-x/issues"
-  },
-  "homepage": "https://github.com/GiovanniAS/front-re-inventory-x#readme",
   "dependencies": {
     "axios": "^0.26.1",
     "boostrap": "^2.0.0",
@@ -25,13 +15,29 @@
     "vue": "^2.6.14",
     "vue-axios": "^3.4.1",
     "vue-router": "^3.5.1",
+    "vuetify": "^2.6.0",
     "vuex": "^3.6.2"
   },
   "devDependencies": {
+    "@mdi/font": "^6.6.96",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
-    "vue-template-compiler": "^2.6.14"
+    "sass": "~1.32.0",
+    "sass-loader": "^10.0.0",
+    "vue-cli-plugin-vuetify": "~2.4.8",
+    "vue-template-compiler": "^2.6.14",
+    "vuetify-loader": "^1.7.0"
+  },
+  "bugs": {
+    "url": "https://github.com/GiovanniAS/front-re-inventory-x/issues"
+  },
+  "homepage": "https://github.com/GiovanniAS/front-re-inventory-x#readme",
+  "keywords": [],
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GiovanniAS/front-re-inventory-x.git"
   }
 }

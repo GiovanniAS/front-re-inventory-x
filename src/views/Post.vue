@@ -1,25 +1,25 @@
 <template>
     <div class="container">
         <form class="formPost" @submit.prevent="agregarProducto(producto)">
-            <h3 class="text-center"> Añadir producto al inventario</h3>
-            <div class="input-group">
-                <input type="text" placeholder="Ingresa el modelo" class="form-control-my-2 elementsi" v-model="producto.nombre">
+            <h3 class=""> Añadir producto al inventario</h3>
+            <div class="">
+                <input class="elementsi" type="text" placeholder="Ingresa el modelo" v-model="producto.nombre">
             </div>
-            <div class="input-group">
-                <input type="text" placeholder="Ingresa la descripcion" class="form-control-my-2 elementsi" v-model="producto.descripcion">
+            <div class="">
+                <input class="elementsi" type="text" placeholder="Ingresa la descripcion" v-model="producto.descripcion">
             </div>
-            <div class="input-group" placeholder="Ingresa el la categoria">
-                <input type="text" placeholder="Ingresa el precio" class="form-control-my-2 elementsi" v-model="producto.precio">
+            <div class="" placeholder="Ingresa el la categoria">
+                <input class="elementsi" type="text" placeholder="Ingresa el precio" v-model="producto.precio">
             </div>
-            <div class="input-group">
-                <b-form-select v-model="producto.categoria" :options="options"></b-form-select>
+            <div class="">
+                <b-form-select v-model="producto.categoria" :options="options" class="elementsi"></b-form-select>
                 <!-- <input type="text" placeholder="Ingresa el precio" class="form-control-my-2 elementsi" v-model="producto.precio"> -->
             </div>
-            <b-button class="btn btn-block btn-success elements" type="submit">
+            <b-button class="elements" type="submit">
                 Añadir
             </b-button>
             <router-link 
-            class="btn btn-warning elements"
+            class="elements"
             to="/productos">
             Cancelar
             </router-link>
