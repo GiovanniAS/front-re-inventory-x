@@ -4,7 +4,10 @@
     <v-container class="container">
         <h1>Productos</h1>
         <br>
-        <v-btn class="green white--text" style="width:100%; margin: 5px;" to="/post">Agregar producto</v-btn>
+        <!-- <v-btn class="green white--text" style="width:100%; margin: 5px;" to="/post">Agregar producto</v-btn> -->
+        <v-btn class="blue white--text mx-2" fab mid to="/post">
+            <v-icon>mdi-plus</v-icon>
+        </v-btn>
         <br><br>
         <v-card>
             <v-simple-table >

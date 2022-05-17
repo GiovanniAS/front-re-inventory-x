@@ -1,6 +1,6 @@
 <template>
     <v-conatainer>
-        <form class="formPost" @submit.prevent="agregarProducto(producto)">
+        <v-form class="formPost" @submit.prevent="agregarProducto(producto)" id="post-form">
             <h3 class=""> Añadir producto al inventario</h3>
             <v-text-field class="elementsi" type="text" placeholder="Ingresa el modelo" v-model="producto.nombre">
                 <!-- <input class="elementsi" type="text" placeholder="Ingresa el modelo" v-model="producto.nombre"> -->
@@ -14,16 +14,13 @@
 
             <v-select v-model="producto.categoria" :items="options" class="elementsi"></v-select>
                 <!-- <input type="text" placeholder="Ingresa el precio" class="form-control-my-2 elementsi" v-model="producto.precio"> -->
-
-            <v-btn class="elements" type="submit">
-                Añadir
-            </v-btn>
+            <v-btn class="green white--text" style="width:100%; margin: 5px;" type="submit" form="post-form"> Añadir </v-btn>
             <v-btn 
-            class="elements"
+            class="orange white--text" style="width:100%; margin: 5px;"
             to="/productos">
             Cancelar
             </v-btn>
-        </form>
+        </v-form>
     </v-conatainer> 
 </template>
 

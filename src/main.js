@@ -8,17 +8,17 @@ import VueAxios from 'vue-axios'
 import vuetify from './plugins/vuetify'
 import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
 import Vuetify from 'vuetify/lib'
-
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
 Vue.config.productionTip = false
-Vue.use(VueAxios, axios)
+Vue.use( BootstrapVue,VueAxios, axios)
 Vue.use(Vuetify)
 
 axios.defaults.baseURL = 'http://localhost:3005/'
 
-/* import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-import 'bootstrap-vue/dist/bootstrap-vue-icons.min.css' */
+
 
 new Vue({
   router,

@@ -2,29 +2,30 @@
     <div class="container">
         <form class="formPost" @submit.prevent="editarProducto(productoEditar)">
             <h3 class=""> Editar Producto</h3>
-            <div class="">
-                <input class="elementsi" type="text" placeholder="Ingresa el modelo" v-model="productoEditar.nombre">
-            </div>
-            <div class="">
-                <input class="elementsi" type="text" placeholder="Ingresa la descripcion" v-model="productoEditar.descripcion">
-            </div>
-            <div class="">
-                <input class="elementsi" type="text" placeholder="Ingresa el precio" v-model="productoEditar.precio">
-            </div>
-            <div class="" placeholder="Ingresa el la categoria">
-                <b-form-select class="elementsi" v-model="productoEditar.categoria" :options="options"></b-form-select>
-                <!-- <input type="text" placeholder="Ingresa el precio" class="form-control-my-2 elementsi" v-model="producto.precio"> -->
-            </div>
-            <b-button 
+            <v-text-field class="elementsi" type="text" placeholder="Ingresa el modelo" v-model="productoEditar.nombre">
+                <!-- <input class="elementsi" type="text" placeholder="Ingresa el modelo" v-model="producto.nombre"> -->
+            </v-text-field>
+
+            <v-text-field class="elementsi" type="text" placeholder="Ingresa la descripcion" v-model="productoEditar.descripcion">
+                
+            </v-text-field>
+
+            <v-text-field class="elementsi" type="text" placeholder="Ingresa el precio" v-model="productoEditar.precio">
+                
+            </v-text-field>
+
+            <v-select v-model="productoEditar.categoria" :items="options" class="elementsi"></v-select>
+            
+            <v-btn 
             class="elementsi" 
             type="submit">
                 Actualizar
-            </b-button>
-            <router-link 
-            class="elementsi"
+            </v-btn>
+            <v-btn 
+            class="elements"
             to="/productos">
             Cancelar
-            </router-link>
+            </v-btn>
         </form>
     </div> 
 </template>
