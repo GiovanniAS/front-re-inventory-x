@@ -8,7 +8,7 @@
             <v-text-field class="elementsi" type="text" placeholder="Ingresa la descripcion" v-model="producto.descripcion">
                 
             </v-text-field>
-            <v-text-field class="elementsi" type="text" placeholder="Ingresa el precio" v-model="producto.precio">
+            <v-text-field class="elementsi" type="number" placeholder="Ingresa el precio" v-model="producto.precio">
                 
             </v-text-field>
 
