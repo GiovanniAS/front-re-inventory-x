@@ -11,7 +11,19 @@
       <v-btn icon @click="cerrarSesion">
         <v-icon>mdi-logout</v-icon>
       </v-btn>
-    </v-toolbar>
+</v-toolbar>
+    <v-tabs
+      background-color="blue"
+      center-active
+      dark
+    >
+    <v-spacer></v-spacer>
+      <v-tab to="/productos">Todos</v-tab>
+      <v-tab to="/computadoras">Computadoras</v-tab>
+      <v-tab to="/telefonos">Telefonos</v-tab>
+      <v-tab to="/accesorios">Accesorios</v-tab>
+    <v-spacer></v-spacer>
+    </v-tabs>
 </div>
 </template>
 
