@@ -21,12 +21,12 @@
             <v-select v-model="productoEditar.categoria" :items="options" class="elementsi"></v-select>
             
             <v-btn 
-            class="elementsi" 
+            class="elementsi green white--tex" 
             type="submit">
                 Actualizar
             </v-btn>
             <v-btn 
-            class="elements"
+            class="elementsi orange white--tex"
             to="/productos">
             Cancelar
             </v-btn>
@@ -96,5 +96,6 @@
 .elementsi{
     width: 100%;
     margin: 10px;
+    color: white;
 }
 </style>
