@@ -14,6 +14,10 @@
                 
             </v-text-field>
 
+            <v-text-field class="elementsi" type="number" placeholder="Ingresa la cantidad" v-model="productoEditar.cantidad">
+                
+            </v-text-field>
+
             <v-select v-model="productoEditar.categoria" :items="options" class="elementsi"></v-select>
             
             <v-btn 
@@ -39,9 +43,9 @@
       return{
         productoEditar: {},
         options: [
-                { value: 'computers', text: 'computers' },
-                { value: 'phones', text: 'phones' },
-                { value: 'accesories', text: 'accesories' }
+                { value: 'computers', text: 'Computadoras' },
+                { value: 'phones', text: 'Telefonos' },
+                { value: 'accesories', text: 'Accesorios' }
             ]
       }
     },

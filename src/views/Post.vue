@@ -12,6 +12,10 @@
                 
             </v-text-field>
 
+            <v-text-field class="elementsi" type="number" placeholder="Ingresa la cantidad" v-model="producto.cantidad">
+                
+            </v-text-field>
+
             <v-select v-model="producto.categoria" :items="options" class="elementsi"></v-select>
                 <!-- <input type="text" placeholder="Ingresa el precio" class="form-control-my-2 elementsi" v-model="producto.precio"> -->
             <v-btn class="green white--text" style="width:100%; margin: 5px;" type="submit" form="post-form"> Añadir </v-btn>
@@ -33,9 +37,9 @@ export default {
             producto: {},
             productos: [],
             options: [
-                { value: 'computers', text: 'computers' },
-                { value: 'phones', text: 'phones' },
-                { value: 'accesories', text: 'accesories' }
+                { value: 'computers', text: 'Computadoras' },
+                { value: 'phones', text: 'Telefonos' },
+                { value: 'accesories', text: 'Accesorios' }
             ]
         }
     },

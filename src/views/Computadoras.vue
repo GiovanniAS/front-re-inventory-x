@@ -18,6 +18,7 @@
                         <th class="white--text" scope="col">Descripcion</th>
                         <th class="white--text" scope="col">Precio</th>
                         <th class="white--text" scope="col">Categoria</th>
+                        <th class="white--text" scope="col">Cantidad</th>
                         <th class="white--text" scope="col">Acciones</th>
                     </tr>
                 </thead>
@@ -28,6 +29,7 @@
                         <td>{{ producto.descripcion }}</td>
                         <td>{{ producto.precio }}</td>
                         <td>{{ producto.categoria }}</td>
+                        <td>{{ producto.cantidad }}</td>
                         <td>
                             <v-btn 
                                 class="yellow dark--text mx-2" 

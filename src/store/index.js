@@ -23,7 +23,7 @@ export default new Vuex.Store({
   actions: {
     async login({ commit }, usuario){
       try {
-        const res = await fetch('https://login-app-back-giovs.herokuapp.com/api/user/login',{
+        const res = await fetch('http://localhost:3005/api/user/login',{
           method: 'POST',
           headers: {
             'content-type': 'application/json',
@@ -37,7 +37,7 @@ export default new Vuex.Store({
         localStorage.setItem('token2', usuarioDB.data.token)
         console.log('validando token: ', usuarioDB.data.token)
         try {
-          const res = await fetch('https://login-app-back-giovs.herokuapp.com/api/dashboard', {
+          const res = await fetch('http://localhost:3005/api/dashboard', {
             headers:{
               'Content-Type': 'appliication/json',
             'auth-token': usuarioDB.data.token
