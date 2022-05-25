@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <v-toolbar class="blue" dark dense >
         <v-toolbar-title s>
           <v-icon>mdi-note-multiple-outline</v-icon>
@@ -36,3 +35,10 @@ export default {
 }
 </script>
 
+<style scoped>
+  div{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+</style>

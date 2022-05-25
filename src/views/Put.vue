@@ -19,17 +19,18 @@
             </v-text-field>
 
             <v-select v-model="productoEditar.categoria" :items="options" class="elementsi"></v-select>
-            
-            <v-btn 
-            class="elementsi green white--tex" 
-            type="submit">
-                Actualizar
-            </v-btn>
-            <v-btn 
-            class="elementsi orange white--tex"
-            to="/productos">
-            Cancelar
-            </v-btn>
+            <div style="display:flex;">
+              <v-btn 
+              class="elementsi green white--tex btnn" 
+              type="submit" style="width:50%;">
+                  Actualizar
+              </v-btn>
+              <v-btn 
+              class="elementsi orange white--tex btnn"
+              to="/productos" style="width:50%;">
+              Cancelar
+              </v-btn>
+            </div>
         </form>
     </div> 
 </template>
@@ -85,8 +86,9 @@
 
 <style scoped>
 .formPost{
-    width: 100%;
+    width: 70%;
     padding: 3%;
+    margin: auto;
 
 }
 .elements{
@@ -95,7 +97,10 @@
 }
 .elementsi{
     width: 100%;
-    margin: 10px;
+    margin: 5px;
     color: white;
+}
+.btnn:hover{
+    box-shadow: 5px 5px 5px #555 !important;
 }
 </style>

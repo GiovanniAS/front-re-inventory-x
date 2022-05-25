@@ -5,7 +5,7 @@
         <h1>Productos</h1>
         <br>
         <!-- <v-btn class="green white--text" style="width:100%; margin: 5px;" to="/post">Agregar producto</v-btn> -->
-        <v-btn class="blue white--text mx-2" fab mid to="/post">
+        <v-btn class="blue white--text mx-2 btn-add" fab mid to="/post">
             <v-icon>mdi-plus</v-icon>
         </v-btn>
         <br><br>
@@ -32,7 +32,7 @@
                         <td>{{ producto.cantidad }}</td>
                         <td>
                             <v-btn 
-                                class="yellow dark--text mx-2" 
+                                class="yellow dark--text mx-2 btnn" 
                                 fab
                                 small
                                 @click="actualizarProducto(producto._id)">
@@ -40,11 +40,11 @@
                             </v-btn>
                             
                             <v-btn 
-                                class="red white--text mx-2"
+                                class="red white--text mx-2 btnn btn-delete"
                                 fab 
                                 small
                                 @click="eliminarProducto(producto._id)">
-                                <v-icon>mdi-delete</v-icon>
+                                <v-icon class="delete__1">mdi-delete</v-icon>
                             </v-btn>
                         </td>
                     </tr>
@@ -103,3 +103,17 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+    .btn-add:hover{
+        background-color: rgb(30, 172, 80) !important;
+        box-shadow: 5px 5px 5px #555 !important;
+    }
+    .btn-delete:hover{
+        background-color: #ad0101 !important;
+        transition-delay: 40ms;
+    }
+    .btnn:hover{
+        box-shadow: 5px 5px 5px #555 !important;
+    }
+</style>
