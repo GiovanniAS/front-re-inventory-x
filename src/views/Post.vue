@@ -16,14 +16,17 @@
                 
             </v-text-field>
 
-            <v-select v-model="producto.categoria" :items="options" class="elementsi"></v-select>
+            <v-select v-model="producto.categoria" :items="options" class="elementsi" placeholder="Categoría"></v-select>
                 <!-- <input type="text" placeholder="Ingresa el precio" class="form-control-my-2 elementsi" v-model="producto.precio"> -->
-            <v-btn class="green white--text" style="width:100%; margin: 5px;" type="submit" form="post-form"> Añadir </v-btn>
-            <v-btn 
-            class="orange white--text" style="width:100%; margin: 5px;"
-            to="/productos">
-            Cancelar
-            </v-btn>
+            <div style="display:flex;">
+                <v-btn class="green white--text btnn" style="width:50%; margin: 5px;" type="submit" form="post-form"> Añadir </v-btn>
+                <v-btn 
+                class="orange white--text btnn" style="width:50%; margin: 5px;"
+                to="/productos">
+                Cancelar
+                </v-btn>
+
+            </div>
         </v-form>
     </v-conatainer> 
 </template>
@@ -63,9 +66,9 @@ export default {
 
 <style scoped>
 .formPost{
-    width: 100%;
+    max-width: 70%;
     padding: 3%;
-
+    margin: auto;
 }
 .elements{
     width: 100%;
@@ -73,6 +76,9 @@ export default {
 }
 .elementsi{
     width: 100%;
-    margin: 10px;
+    margin: 5px;
+}
+.btnn:hover{
+    box-shadow: 5px 5px 5px #555 !important;
 }
 </style>

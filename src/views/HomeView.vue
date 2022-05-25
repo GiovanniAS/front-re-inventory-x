@@ -2,9 +2,9 @@
 <div>
   <Header />
     <v-app>
-      <v-card class="mx-10 my-10">
+      <v-card class="mx-auto my-auto" width="70%">
         <v-app-bar dark color="blue">
-          <v-toolbar-title>Iniciar Sesión</v-toolbar-title>
+          <v-toolbar-title class="label">Iniciar Sesión</v-toolbar-title>
         </v-app-bar>
         <v-card-text>
           <form @submit.prevent="login(usuario)" class="v-form">
@@ -20,7 +20,7 @@
             </v-row>
             <v-row>
               <v-col class="d-flex" cols="12" sm="3" xsm="12" align-end>
-                <v-btn dark color="blue" type="submit">Ingresar</v-btn>
+                <v-btn dark color="blue" type="submit" class="btn-login">Ingresar</v-btn>
               </v-col>
             </v-row>
           </form>
@@ -50,3 +50,27 @@
 
   }
 </script>
+
+<style scoped>
+  .btn-login:hover{
+    background-color: rgb(30, 172, 80) !important;
+    box-shadow: 5px 5px 5px #555 !important;}
+  .label{
+    position: relative;
+    display: inline;
+    margin: auto;
+    animation-name: desplazar;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+@keyframes desplazar{
+  0%{
+    transform: translateX(-100%);
+    }
+  100%{
+    transform: translateX(100%);
+  }
+}
+</style>
