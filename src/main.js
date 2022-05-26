@@ -14,7 +14,7 @@ Vue.config.productionTip = false
 Vue.use( BootstrapVue,VueAxios, axios)
 Vue.use(Vuetify)
 
-axios.defaults.baseURL = 'http://localhost:3005/'
+axios.defaults.baseURL = 'https://inventoryxback.herokuapp.com/'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
