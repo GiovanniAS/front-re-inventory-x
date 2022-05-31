@@ -12,9 +12,12 @@
           <v-tab to="/telefonos">Phones</v-tab>
           <v-tab to="/accesorios">Accesories</v-tab>
           <v-spacer></v-spacer>
+          <v-btn icon to="/register">
+            <v-icon>mdi-account-plus</v-icon>
+          </v-btn>
           <v-btn icon @click="cerrarSesion">
-          <v-icon>mdi-logout</v-icon>
-        </v-btn>
+            <v-icon>mdi-logout</v-icon>
+          </v-btn>
 
         </v-tabs>
     </v-toolbar>

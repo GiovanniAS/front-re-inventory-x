@@ -7,6 +7,7 @@ import Telefonos from '../views/Telefonos.vue'
 import Accesorios from '../views/Accesorios.vue'
 import Post from '../views/Post.vue'
 import Put from '../views/Put.vue'
+import Register from '../views/Register.vue'
 
 Vue.use(VueRouter)
 
@@ -40,6 +41,11 @@ const routes = [
     path: '/post',
     name: 'Post',
     component: Post
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: Register
   },
   {
     path: '/put/:id',
