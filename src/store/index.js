@@ -55,6 +55,8 @@ export default new Vuex.Store({
         
       } catch (error) {
         console.log('error: ' + error)
+        alert('Datos incorrectos')
+        
       }
     },
     obtenerToken({ commit }){

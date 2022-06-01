@@ -1,5 +1,5 @@
 <template>
-    <v-conatainer>
+    <v-container>
         <v-form class="formPost" @submit.prevent="agregarProducto(producto)" id="post-form">
             <h3 class=""> Añadir producto al inventario</h3>
             <v-text-field class="elementsi" type="text" placeholder="Ingresa el modelo" v-model="producto.nombre">
@@ -28,7 +28,7 @@
 
             </div>
         </v-form>
-    </v-conatainer> 
+    </v-container> 
 </template>
 
 <script>
