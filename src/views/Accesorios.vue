@@ -111,7 +111,8 @@ import axios  from 'axios'
 export default {
     data () {
         return {
-            productos: []
+            productos: [],
+            dialog: false
         }
     },
     methods: {
