@@ -5,7 +5,7 @@
         <h1>Productos</h1>
         <br>
         <!-- <v-btn class="green white--text" style="width:100%; margin: 5px;" to="/post">Agregar producto</v-btn> -->
-        <v-btn class="blue white--text mx-2" fab mid to="/post">
+        <v-btn class="blue white--text mx-2 btn-add" fab mid to="/post">
             <v-icon>mdi-plus</v-icon>
         </v-btn>
         <br><br>
@@ -15,9 +15,9 @@
                     <tr class="light-blue darken-2">
                         <th class="white--text" scope="col">#</th>
                         <th class="white--text" scope="col">Producto</th>
-                        <th class="white--text" scope="col">Descripcion</th>
+                        <th class="white--text" scope="col">Descripción</th>
                         <th class="white--text" scope="col">Precio</th>
-                        <th class="white--text" scope="col">Categoria</th>
+                        <th class="white--text" scope="col">Categoría</th>
                         <th class="white--text" scope="col">Cantidad</th>
                         <th class="white--text" scope="col">Acciones</th>
                     </tr>
@@ -32,22 +32,12 @@
                         <td>{{ producto.cantidad }}</td>
                         <td>
                             <v-btn 
-                                class="yellow dark--text mx-2" 
+                                class="yellow dark--text mx-2 btnn" 
                                 fab
                                 small
                                 @click="actualizarProducto(producto._id)">
                                 <v-icon>mdi-pencil</v-icon>
                             </v-btn>
-                            
-                            <!--
-                            <v-btn 
-                                class="red white--text mx-2 btnn btn-delete"
-                                fab 
-                                small
-                                @click="eliminarProducto(producto._id)">
-                                <v-icon class="delete__1">mdi-delete</v-icon>
-                            </v-btn>
-                            -->
                             
                             <v-btn
                             dark

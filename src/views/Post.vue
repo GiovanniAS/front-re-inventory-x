@@ -54,7 +54,7 @@ export default {
                     window.location.href = '/productos'
                 })
                 .catch( e =>{
-                    console.log('error: '+e)
+                    //console.log('error: '+e)
                 })
         },
         regresar(){

@@ -39,8 +39,8 @@
     data() {
       return {
         usuario:{
-          email: "giovannidas@correos.com",
-          password: "123456"
+          email: "",
+          password: ""
         }
       }
     },

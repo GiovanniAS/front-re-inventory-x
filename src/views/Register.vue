@@ -43,8 +43,8 @@ export default {
                     window.location.href = '/productos'
                 })
                 .catch( e =>{
-                    console.log('error: '+e)
-                    console.log(item)
+                    //console.log('error: '+e)
+                    //console.log(item)
                     alert('Por favor ingrese todos los datos correctamente')
                 })
         },

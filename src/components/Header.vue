@@ -8,11 +8,11 @@
         <v-tabs background-color="blue">
           <v-spacer></v-spacer>
           <v-tab to="/productos">Todos</v-tab>
-          <v-tab to="/computadoras">Computers</v-tab>
-          <v-tab to="/telefonos">Phones</v-tab>
-          <v-tab to="/accesorios">Accesories</v-tab>
+          <v-tab to="/computadoras">Computadoras</v-tab>
+          <v-tab to="/telefonos">Teléfonos</v-tab>
+          <v-tab to="/accesorios">Accesorios</v-tab>
           <v-spacer></v-spacer>
-          <v-btn icon to="/register">
+          <v-btn icon to="/register" class="btn-add">
             <v-icon>mdi-account-plus</v-icon>
           </v-btn>
           <!--
@@ -23,6 +23,7 @@
           <v-btn
             @click.stop="dialog = true"
             icon
+            class="btn-delete btnn"
             >
             <v-icon>mdi-logout</v-icon>                 
           </v-btn>
@@ -31,8 +32,7 @@
           max-width="290"
           :retain-focus="false"
           >
-            <v-card
-          class="dialog">
+            <v-card>
               <v-card-title class="text-h5">
               ¿Seguro que quiere cerrar sesión?
               </v-card-title>
@@ -86,10 +86,5 @@ export default {
     position: sticky;
     top: 0;
     z-index: 100;
-  }
-
-  .dialog{
-    margin: auto;
-    position: static !important;
   }
 </style>
