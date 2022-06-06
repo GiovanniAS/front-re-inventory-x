@@ -15,9 +15,9 @@
                     <tr class="light-blue darken-2">
                         <th class="white--text" scope="col">#</th>
                         <th class="white--text" scope="col">Producto</th>
-                        <th class="white--text" scope="col">Descripcion</th>
+                        <th class="white--text" scope="col">Descripción</th>
                         <th class="white--text" scope="col">Precio</th>
-                        <th class="white--text" scope="col">Categoria</th>
+                        <th class="white--text" scope="col">Categoría</th>
                         <th class="white--text" scope="col">Cantidad</th>
                         <th class="white--text" scope="col">Acciones</th>
                     </tr>
@@ -39,13 +39,53 @@
                                 <v-icon>mdi-pencil</v-icon>
                             </v-btn>
                             
-                            <v-btn 
-                                class="red white--text mx-2 btnn btn-delete"
-                                fab 
-                                small
-                                @click="eliminarProducto(producto._id)">
+                            <v-btn
+                            dark
+                            class="red white--text mx-2 btnn btn-delete"
+                            fab 
+                            @click.stop="dialog = true"
+                            @click="guardarIdProducto(producto._id)"
+                            small>
                                 <v-icon class="delete__1">mdi-delete</v-icon>
+                            
                             </v-btn>
+
+                            <v-dialog
+                            v-model="dialog"
+                            max-width="290"
+                            :retain-focus="false"
+                            >
+                            <v-card>
+                                <v-card-title class="text-h5">
+                                ¿Seguro que quiere eliminar este elemento?
+                                </v-card-title>
+
+                                <v-card-text>
+                                No habrá vuelta atrás.
+                                </v-card-text>
+
+                                <v-card-actions>
+                                <v-spacer></v-spacer>
+
+                                <v-btn
+                                    color="green darken-1"
+                                    text
+                                    @click="dialog = false"
+                                >
+                                    Cancelar
+                                </v-btn>
+
+                                <v-btn
+                                    color="red darken-1"
+                                    text
+                                    @click="dialog=false"
+                                    @click.stop="eliminarProducto()"
+                                >
+                                    Eliminar
+                                </v-btn>
+                                </v-card-actions>
+                            </v-card>
+                            </v-dialog>
                         </td>
                     </tr>
                 </tbody>
@@ -61,10 +101,15 @@ import axios  from 'axios'
 export default {
     data () {
         return {
-            productos: []
+            productos: [],
+            dialog: false
         }
     },
     methods: {
+        guardarIdProducto(id){
+        //console.log(id);
+        localStorage.setItem(`idProducto`,id);
+        },
         mostrarProductos(){
             axios.get('apiProducto/producto')
                 .then( (res) => {
@@ -72,17 +117,19 @@ export default {
                     //console.log(this.notas)
                 })
                 .catch( (e) => {
-                    console.log('error: '+ e)
+                    //console.log('error: '+ e)
                 })
         },
-        eliminarProducto(id){
+        eliminarProducto(){
+            const id=localStorage.getItem('idProducto')
             axios.delete(`apiProducto/producto/${id}`)
                 .then( res => {
                      let index = this.productos.findIndex(item => item._id === res.data._id)
                      this.productos.splice(index,1)
+                     localStorage.removeItem('idProducto')
                 })
                 .catch( e => {
-                    console.log('error: ' + e)
+                    //console.log('error: ' + e)
                 })
         },
         actualizarProducto(id){
@@ -104,7 +151,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
     .btn-add:hover{
         background-color: rgb(30, 172, 80) !important;
         box-shadow: 5px 5px 5px #555 !important;

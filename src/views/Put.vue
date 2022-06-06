@@ -60,10 +60,10 @@
         axios.get(`apiProducto/producto/${idProducto}`)
           .then ( res => {
             this.productoEditar = res.data
-            console.log(this.productoEditar)
+            //console.log(this.productoEditar)
           })
           .catch( e => {
-             console.log('error ' + e)
+             //console.log('error ' + e)
           })
       },
       editarProducto(item){
@@ -73,10 +73,10 @@
             this.$router.push({
                 name: "Productos"
             });
-            console.log(res)
+            //console.log(res)
           })
           .catch( e => {
-             console.log('error ' + e)
+             //console.log('error ' + e)
           })
       }
     }

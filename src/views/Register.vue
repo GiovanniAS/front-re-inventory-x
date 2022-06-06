@@ -1,5 +1,5 @@
 <template>
-    <v-conatainer>
+    <v-container>
         <v-form class="formPost" @submit.prevent="agregarUsuario(usuario)" id="post-form">
             <h3 class=""> Registrar un usuario nuevo </h3>
             <v-text-field class="elementsi" type="text" placeholder="Ingresa el nombre" v-model="usuario.name">
@@ -22,7 +22,7 @@
 
             </div>
         </v-form>
-    </v-conatainer> 
+    </v-container> 
 </template>
 
 <script>
@@ -43,7 +43,9 @@ export default {
                     window.location.href = '/productos'
                 })
                 .catch( e =>{
-                    console.log('error: '+e)
+                    //console.log('error: '+e)
+                    //console.log(item)
+                    alert('Por favor ingrese todos los datos correctamente')
                 })
         },
         regresar(){
