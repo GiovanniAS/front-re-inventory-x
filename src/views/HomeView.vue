@@ -39,8 +39,8 @@
     data() {
       return {
         usuario:{
-          email: "",
-          password: ""
+          email: "admin@gmail.com",
+          password: "qwerty"
         }
       }
     },
