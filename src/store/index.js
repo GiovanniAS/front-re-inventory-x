@@ -31,7 +31,7 @@ export default new Vuex.Store({
           body: JSON.stringify(usuario),
           status:JSON.stringify()
         })
-        console.log(res)
+        //console.log(res)
         const usuarioDB = await res.json()
         commit('setToken', usuarioDB.data.token)
         localStorage.setItem('token2', usuarioDB.data.token)
@@ -45,16 +45,16 @@ export default new Vuex.Store({
             
           })
           const resBD = await res.json()
-          console.log(resBD)
+          //console.log(resBD)
           if(resBD.error == null){
             window.location.href = '/productos'
           }
         } catch (error) {
-          console.log(error)
+          //console.log(error)
         }
         
       } catch (error) {
-        console.log('error: ' + error)
+        //console.log('error: ' + error)
         alert('Datos incorrectos')
         
       }
